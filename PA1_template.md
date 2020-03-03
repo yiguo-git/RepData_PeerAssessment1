@@ -1,5 +1,6 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
+date: "3/2/2020"
 output: 
   html_document:
     keep_md: true
@@ -25,7 +26,7 @@ calculate the sum of steps for each day using tapply with na removed, and plot t
 ```r
 daytotal <- tapply(table1$step, table1$date, sum, na.rm = T)
 df_daytotal <- data.frame(daytotal)
-hist(df_daytotal$daytotal, breaks = 20, xlab = "total steps per day")
+hist(df_daytotal$daytotal, breaks = 20, xlab = "total steps per day", main = "Histogram of total steps per day")
 ```
 
 ![](PA1_template_files/figure-html/Q1-1.png)<!-- -->
@@ -79,7 +80,7 @@ Use tapply function to calculate the sum for the new data frame
 ```r
 daytotal <- tapply(table2$step, table2$date, sum)
 df_daytotal2 <- data.frame(daytotal)
-hist(df_daytotal2$daytotal, breaks = 20, xlab = "total steps per day")
+hist(df_daytotal2$daytotal, breaks = 20, xlab = "total steps per day", main = "Total steps per day")
 ```
 
 ![](PA1_template_files/figure-html/Q3-2-1.png)<!-- -->
